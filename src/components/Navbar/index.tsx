@@ -1,17 +1,21 @@
-import useTheme from "../../hooks/useTheme";
 import Switch from "../../hooks/useTheme/Switch";
+import BurgerMenu from "../../static/svg/BurgerMenu";
 
 export default function Navbar() {
-  const theme = useTheme();
-  const { mode } = theme;
-
   return (
-    <nav className='flex fixed w-full items-center justify-between px-6 h-16 bg-white text-black dark:bg-black dark:text-white z-10'>
-      <img
-        src={require(`../../static/img/Carlingwood${mode === "dark" ? "_Dark" : ""}_Cropped.png`)}
-        alt='Carlingwood_Badminton_Logo'
-      />
-      <div className='flex gap-2'>
+    <nav className='flex fixed w-full items-center justify-between px-1 h-16 bg-white text-black dark:bg-black dark:text-white z-10'>
+      <div className='flex gap-1 ml-3 items-center'>
+        <BurgerMenu />
+        <a href='http://localhost:3000'>
+          <img
+            src={require(`../../static/img/CW1 - Full.png`)}
+            alt='Carlingwood_Badminton_Logo'
+            width={100}
+            className='mt-5'
+          />
+        </a>
+      </div>
+      <div className='flex gap-2 mr-2'>
         <Switch />
       </div>
     </nav>
