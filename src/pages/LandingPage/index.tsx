@@ -1,24 +1,15 @@
-import AnimatedTypography from "../../components/AnimatedTypography";
 import Section from "../../components/Section";
 import DownArrow from "../../static/svg/DownArrow";
 
 export default function LandingPage() {
   return (
     <Section>
-      <div className='flex flex-col w-full h-full items-center'>
-        <div className='flex-grow' />
-        <div className='animate-fade ml-5'>
-          <AnimatedTypography
-            textArr={["Carlingwood Badminton Club"]}
-            className='text-xl font-bold text-black  dark:text-white dark:bg-black'
-            repeat={true}
-          />
-        </div>
+      <div className='flex flex-col items-center w-full h-full p-5'>
         <p className='text-xl font-bold text-black mt-1  dark:text-white dark:bg-black'>
-          {`<Introduction Section will go here>`}
+          Carlingwood Badminton Club
         </p>
         <div className='flex-grow' />
-        <div className='rounded-full animate-bounce flex flex-col items-center mb-5'>
+        <div className='rounded-full animate-bounce flex flex-col items-center'>
           <DownArrow />
           <p>Scroll to start</p>
         </div>

@@ -1,5 +1,4 @@
 import * as React from "react";
-import Switch from "./Switch";
 
 export enum ThemeEnum {
   DARK = "dark",
@@ -26,10 +25,5 @@ export default function ThemeProvider({ children }: any) {
     localStorage.setItem("theme", theme.mode);
   }, [theme, colorTheme]);
 
-  return (
-    <ThemeContext.Provider value={[theme, setTheme]}>
-      {children}
-      <Switch />
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={[theme, setTheme]}>{children}</ThemeContext.Provider>;
 }
