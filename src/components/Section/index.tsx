@@ -7,7 +7,7 @@ export default function Container({ children }: { children?: React.ReactNode }) 
   return (
     <section
       ref={sectionRef}
-      className='snap-start w-screen h-screen flex flex-col bg-white text-black dark:bg-black dark:text-white'>
+      className='snap-start w-screen h-screen flex flex-col bg-white text-black dark:bg-black dark:text-white overflow-hidden'>
       <EmptyNavbar />
       {children}
     </section>
