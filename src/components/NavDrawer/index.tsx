@@ -1,10 +1,7 @@
+import * as React from "react";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import ListSubheader from "@mui/material/ListSubheader";
 import HomeIcon from "@mui/icons-material/Home";
 import CampaignIcon from "@mui/icons-material/Campaign";
 import Groups2Icon from "@mui/icons-material/Groups2";
@@ -14,13 +11,15 @@ import FactoryIcon from "@mui/icons-material/Factory";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
+import ListItemButton from "./ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 
 const itemData = [
   { title: "Home", icon: <HomeIcon /> },
   { title: "Announcements", icon: <CampaignIcon /> },
   { title: "About Us", icon: <Groups2Icon /> },
   { title: "Membership", icon: <CardMembershipIcon /> },
-  { title: "Regulations", icon: <RuleIcon /> },
+  { title: "Regulations", icon: <RuleIcon />, path: "/regulations" },
   { title: "Facilities", icon: <FactoryIcon /> },
   { title: "Fees", icon: <AttachMoneyIcon /> },
   { title: "Contact Us", icon: <AlternateEmailIcon /> },
@@ -50,10 +49,7 @@ export default function NavDrawer({
         </ListItem>
         {itemData.map((item, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.title} />
-            </ListItemButton>
+            <ListItemButton path={item.path ?? ""} icon={item.icon} text={item.title} />
           </ListItem>
         ))}
       </List>
