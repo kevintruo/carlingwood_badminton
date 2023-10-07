@@ -9,7 +9,8 @@ export default function Registration() {
   const [inProgress, setInProgress] = React.useState<boolean>(false);
   const [email, setEmail] = React.useState<string | null>("");
   const [name, setName] = React.useState<string | null>("");
-  const webAppUrl = "YOUR_WEB_APP_URL";
+  const webAppUrl =
+    "https://script.google.com/macros/s/AKfycbzOTJFMhpCNMIq6P4RHpMIrwWPn4zs1cIxSSZInJ7UT-2aOTe04oMrobzN6CF1yF0ks/exec";
 
   const submitForm = async () => {
     if (!email || !name) return;

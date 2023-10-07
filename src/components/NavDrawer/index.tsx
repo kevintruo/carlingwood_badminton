@@ -37,14 +37,17 @@ export default function NavDrawer({
   return (
     <Drawer anchor='left' open={isOpened} onClose={() => toggleDrawer(false)}>
       <List sx={{ width: 250 }}>
-        <ListSubheader sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-          Carlingwood Badminton
+        <ListItem sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+          <ListItemText
+            primary='Carlingwood Badminton'
+            primaryTypographyProps={{ variant: "h6" }}
+          />
           <img
             src={require(`../../static/img/CW1 - Full.png`)}
             alt='Carlingwood_Badminton_Logo'
-            width={50}
+            width={100}
           />
-        </ListSubheader>
+        </ListItem>
         {itemData.map((item, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton>
