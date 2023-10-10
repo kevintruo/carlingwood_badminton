@@ -3,11 +3,12 @@ import Section from "../../components/Section";
 export default function Announcement() {
   return (
     <Section id='announcement'>
-      <div className='flex flex-row w-full justify-between p-5 text-center'>
+      <div className='flex flex-row w-full justify-between p-2 text-center'>
         <div className='flex flex-col w-full'>
-          <p className='text-xl font-semibold text-black  dark:text-white dark:bg-black underline'>
+          <p className='text-lg font-semibold text-black  dark:text-white dark:bg-black underline'>
             Announcements:
           </p>
+          <p className='text-xl font-bold text-red-500'>2023-2024 Season is in progress</p>
           <div className='p-3 w-full'>
             <p className='inline font-bold'>Sept 19th, 2023</p> - WE ARE BACK! we've booked the
             courts, steamed our birds and done our yearly sweatband wash.
@@ -26,7 +27,14 @@ export default function Announcement() {
               away.
             </p>{" "}
             <br />
-            <a href='url' className='underline text-blue-500'>
+            <a
+              href='#registration'
+              className='underline text-blue-500'
+              onClick={(e) => {
+                let section = document.getElementById("registration");
+                e.preventDefault();
+                section && section.scrollIntoView({ behavior: "smooth", block: "center" });
+              }}>
               Click here to signup
             </a>
           </div>

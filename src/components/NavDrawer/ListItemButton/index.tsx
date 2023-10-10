@@ -38,7 +38,6 @@ export default function ListItemButton(props: Props) {
       onClick={(e) => {
         let section = document.getElementById(path.replace("#", ""));
         e.preventDefault();
-        console.log(section);
         section && section.scrollIntoView({ behavior: "smooth", block: "center" });
       }}>
       <MuiListItemIcon>{icon}</MuiListItemIcon>
