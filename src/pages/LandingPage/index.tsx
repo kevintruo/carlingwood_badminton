@@ -2,15 +2,13 @@ import * as React from "react";
 import Section from "../../components/Section";
 import LeftArrow from "../../static/svg/LeftArrow";
 import RightArrow from "../../static/svg/RightArrow";
-import AnimatedTypography from "../../components/AnimatedTypography";
 
 export default function LandingPage() {
   return (
-    <Section>
-      <AnimatedTypography
-        textArr={["Welcome to Carlingwood Badminton Club"]}
-        className='text-xl font-bold text-black mt-1  dark:text-white dark:bg-black mb-3'
-      />
+    <Section className='gap-2 items-center'>
+      <p className='text-xl font-bold text-black  dark:text-white dark:bg-black'>
+        Carlingwood Badminton Club
+      </p>
       <ImageList />
     </Section>
   );
@@ -70,7 +68,7 @@ const ImageList = () => {
   }, [currIndex, itemData.length, incrementCallback, decrementCallback]);
 
   return (
-    <div className='flex-grow flex items-center w-full h-52 relative'>
+    <div className='flex-grow flex items-center w-full h-full relative'>
       <div
         className='absolute top-[50%] rounded-full hover:bg-slate-700 p-1 pl-0'
         onClick={() => decrementCallback()}>
