@@ -23,7 +23,7 @@ export default function GuestRegistration() {
   const [isOver18, setIsOver18] = React.useState<boolean>(false);
   const [skillLevel, setSkillLevel] = React.useState<string | null>(null);
   const [playDate, setPlayDate] = React.useState<Moment | null>(moment());
-  const webAppUrl = "<web_url>";
+  const webAppUrl = process.env.REACT_APP_WEB_APP_URL_SCRIPT ?? "";
 
   const submitForm = async () => {
     if (!email || !firstName || !lastName || !phone || !isOver18 || !skillLevel || !playDate)
