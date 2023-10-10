@@ -23,7 +23,8 @@ export default function GuestRegistration() {
   const [isOver18, setIsOver18] = React.useState<boolean>(false);
   const [skillLevel, setSkillLevel] = React.useState<string | null>(null);
   const [playDate, setPlayDate] = React.useState<Moment | null>(moment());
-  const webAppUrl = "";
+  const webAppUrl =
+    "https://script.google.com/macros/s/AKfycbyz-CotGaSRru0c6QdPcELrELMSle3efnvDnj4vBolhEBPT7fx-F-HKywf_bHaX6Jkw/exec";
 
   const submitForm = async () => {
     if (!email || !firstName || !lastName || !phone || !isOver18 || !skillLevel || !playDate)
