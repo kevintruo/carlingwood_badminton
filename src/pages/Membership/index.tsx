@@ -4,7 +4,9 @@ import { Link as RouterLink } from "react-router-dom";
 export default function Membership() {
   return (
     <Section id='membership' className='gap-2'>
-      <p className='text-xl font-bold text-black  dark:text-white dark:bg-black'>Membership</p>
+      <p className='text-3xl font-bold underline text-black  dark:text-white dark:bg-black'>
+        Membership
+      </p>
       <p>
         CLUB REGULATIONS{" "}
         <RouterLink to='/regulations' className='underline'>

@@ -3,7 +3,7 @@ import Section from "../../components/Section";
 export default function Fees() {
   return (
     <Section id='fees' className='gap-2'>
-      <p className='text-3xl font-bold text-black  dark:text-white dark:bg-black'>Fees</p>
+      <p className='text-3xl font-bold underline text-black  dark:text-white dark:bg-black'>Fees</p>
       <div className='flex gap-1'>
         <p>The Early Registration for next season is currently:</p>
         <p className='font-bold'>Open</p>

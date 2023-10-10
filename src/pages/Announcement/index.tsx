@@ -3,7 +3,7 @@ import Section from "../../components/Section";
 export default function Announcement() {
   return (
     <Section id='announcement'>
-      <p className='text-lg font-semibold text-black  dark:text-white dark:bg-black underline'>
+      <p className='text-3xl font-bold text-black  dark:text-white dark:bg-black underline'>
         Announcements:
       </p>
       <p className='text-lg font-bold text-red-500'>2023-2024 Season is in progress</p>

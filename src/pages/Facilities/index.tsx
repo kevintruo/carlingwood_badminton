@@ -3,7 +3,9 @@ import Section from "../../components/Section";
 export default function Facilities() {
   return (
     <Section id='facilities' className='gap-2'>
-      <p className='text-3xl font-bold text-black  dark:text-white dark:bg-black'>Facilities</p>
+      <p className='text-3xl font-bold underline text-black  dark:text-white dark:bg-black'>
+        Facilities
+      </p>
       <p>Carlingwood Badminton Club plays at two different locations in west-end Ottawa:</p>
       <div className='w-full h-full flex flex-col justify-evenly gap-3'>
         <div className='flex flex-row gap-2 h-full'>
