@@ -5,7 +5,7 @@ import RightArrow from "../../static/svg/RightArrow";
 
 export default function LandingPage() {
   return (
-    <Section className='gap-2 items-center'>
+    <Section className='gap-2 items-center h-full'>
       <p className='text-xl font-bold text-black  dark:text-white dark:bg-black'>
         Carlingwood Badminton Club
       </p>
@@ -68,20 +68,17 @@ const ImageList = () => {
   }, [currIndex, itemData.length, incrementCallback, decrementCallback]);
 
   return (
-    <div className='flex-grow flex items-center w-full h-full relative'>
+    <div className='flex flex-row items-center justify-center w-full relative'>
       <div
-        className='absolute top-[50%] rounded-full hover:bg-slate-700 p-1 pl-0'
+        className='top-[50%] rounded-full hover:bg-slate-700 p-1 pl-0'
         onClick={() => decrementCallback()}>
         <LeftArrow />
       </div>
-      <img
-        className='object-scale-down w-full h-full'
-        src={itemData[currIndex].img}
-        alt=''
-        loading='lazy'
-      />
+      <div className='flex-1' />
+      <img className='max-h-[800px]' src={itemData[currIndex].img} alt='' loading='lazy' />
+      <div className='flex-1' />
       <div
-        className='absolute top-[50%] right-0 rounded-full hover:bg-slate-700 p-1 pr-0'
+        className='top-[50%] right-0 rounded-full hover:bg-slate-700 p-1 pr-0'
         onClick={() => incrementCallback()}>
         <RightArrow />
       </div>
