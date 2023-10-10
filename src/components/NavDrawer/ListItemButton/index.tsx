@@ -26,13 +26,12 @@ export default function ListItemButton(props: Props) {
   );
 
   return isLink ? (
-    <MuiListItemButton {...props} component={renderLink}>
+    <MuiListItemButton component={renderLink}>
       <MuiListItemIcon>{icon}</MuiListItemIcon>
       <MuiListItemText primary={text} primaryTypographyProps={{ fontSize: 12 }} />
     </MuiListItemButton>
   ) : (
     <MuiListItemButton
-      {...props}
       component={MuiLink}
       href={path}
       onClick={(e) => {

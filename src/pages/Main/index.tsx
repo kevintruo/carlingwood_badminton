@@ -4,7 +4,7 @@ import Facilities from "../Facilities";
 import Fees from "../Fees";
 import LandingPage from "../LandingPage";
 import Membership from "../Membership";
-import Registration from "../Registration";
+import GuestRegistration from "../GuestRegistration";
 
 export default function Main() {
   return (
@@ -15,7 +15,7 @@ export default function Main() {
       <Facilities />
       <Fees />
       <Contact />
-      <Registration />
+      <GuestRegistration />
     </>
   );
 }

@@ -20,7 +20,7 @@ const itemData = [
   { title: "Facilities", icon: <FactoryIcon />, path: "#facilities" },
   { title: "Fees", icon: <AttachMoneyIcon />, path: "#fees" },
   { title: "Contact Us", icon: <AlternateEmailIcon />, path: "#contact_us" },
-  { title: "Registration", icon: <HowToRegIcon />, path: "#registration" },
+  { title: "Guest Registration", icon: <HowToRegIcon />, path: "#guest_registration" },
 ];
 
 export default function NavDrawer({

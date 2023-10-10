@@ -7,13 +7,11 @@ import AnimatedTypography from "../../components/AnimatedTypography";
 export default function LandingPage() {
   return (
     <Section>
-      <div className='flex flex-col items-center text-center w-full h-full p-3'>
-        <AnimatedTypography
-          textArr={["Welcome to Carlingwood Badminton Club"]}
-          className='text-xl font-bold text-black mt-1  dark:text-white dark:bg-black mb-3'
-        />
-        <ImageList />
-      </div>
+      <AnimatedTypography
+        textArr={["Welcome to Carlingwood Badminton Club"]}
+        className='text-xl font-bold text-black mt-1  dark:text-white dark:bg-black mb-3'
+      />
+      <ImageList />
     </Section>
   );
 }

@@ -5,7 +5,7 @@ import TextField from "@mui/material/TextField";
 import axios from "axios";
 import CircularProgress from "@mui/material/CircularProgress";
 
-export default function Registration() {
+export default function GuestRegistration() {
   const [inProgress, setInProgress] = React.useState<boolean>(false);
   const [email, setEmail] = React.useState<string | null>("");
   const [name, setName] = React.useState<string | null>("");
@@ -27,7 +27,7 @@ export default function Registration() {
   };
 
   return (
-    <Section id='registration'>
+    <Section id='guest_registration'>
       <div className='flex flex-row w-screen justify-between p-5'>
         <div className='flex flex-col gap-3'>
           <p className='text-3xl font-bold text-black  dark:text-white dark:bg-black'>
