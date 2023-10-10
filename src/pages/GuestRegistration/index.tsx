@@ -23,20 +23,20 @@ export default function GuestRegistration() {
   const [isOver18, setIsOver18] = React.useState<boolean>(false);
   const [skillLevel, setSkillLevel] = React.useState<string | null>(null);
   const [playDate, setPlayDate] = React.useState<Moment | null>(moment());
-  const webAppUrl = process.env.REACT_APP_WEB_APP_URL_SCRIPT ?? "";
+  const webAppUrl = "";
 
   const submitForm = async () => {
     if (!email || !firstName || !lastName || !phone || !isOver18 || !skillLevel || !playDate)
       return;
     setInProgress(true);
     let body = new FormData();
-    body.append("Email", email);
     body.append("First Name", firstName);
     body.append("Last Name", lastName);
+    body.append("Email", email);
     body.append("Phone Number", phone);
     body.append("Is Over 18", isOver18 ? "Yes" : "No");
     body.append("Skill Level", skillLevel);
-    body.append("Requested Play Date", playDate.format("mm/dd/yyyy"));
+    body.append("Requested Play Date", playDate.format("MM/DD/yyyy"));
 
     await axios
       .post(webAppUrl, body)
