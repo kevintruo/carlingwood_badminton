@@ -27,7 +27,7 @@ export default function Registration() {
   };
 
   return (
-    <Section>
+    <Section id='registration'>
       <div className='flex flex-row w-screen justify-between p-5'>
         <div className='flex flex-col gap-3'>
           <p className='text-3xl font-bold text-black  dark:text-white dark:bg-black'>

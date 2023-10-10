@@ -1,10 +1,8 @@
-import * as React from "react";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import HomeIcon from "@mui/icons-material/Home";
 import CampaignIcon from "@mui/icons-material/Campaign";
-import Groups2Icon from "@mui/icons-material/Groups2";
 import CardMembershipIcon from "@mui/icons-material/CardMembership";
 import RuleIcon from "@mui/icons-material/Rule";
 import FactoryIcon from "@mui/icons-material/Factory";
@@ -15,15 +13,14 @@ import ListItemButton from "./ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
 const itemData = [
-  { title: "Home", icon: <HomeIcon /> },
-  { title: "Announcements", icon: <CampaignIcon /> },
-  { title: "About Us", icon: <Groups2Icon /> },
-  { title: "Membership", icon: <CardMembershipIcon /> },
-  { title: "Regulations", icon: <RuleIcon />, path: "/regulations" },
-  { title: "Facilities", icon: <FactoryIcon /> },
-  { title: "Fees", icon: <AttachMoneyIcon /> },
-  { title: "Contact Us", icon: <AlternateEmailIcon /> },
-  { title: "Registration", icon: <HowToRegIcon /> },
+  { title: "Home", icon: <HomeIcon />, path: "/", isLink: true },
+  { title: "Announcements", icon: <CampaignIcon />, path: "#announcement" },
+  { title: "Membership", icon: <CardMembershipIcon />, path: "#membership" },
+  { title: "Regulations", icon: <RuleIcon />, path: "/regulations", isLink: true },
+  { title: "Facilities", icon: <FactoryIcon />, path: "#facilities" },
+  { title: "Fees", icon: <AttachMoneyIcon />, path: "#fees" },
+  { title: "Contact Us", icon: <AlternateEmailIcon />, path: "#contact_us" },
+  { title: "Registration", icon: <HowToRegIcon />, path: "#registration" },
 ];
 
 export default function NavDrawer({
@@ -49,7 +46,12 @@ export default function NavDrawer({
         </ListItem>
         {itemData.map((item, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton path={item.path ?? ""} icon={item.icon} text={item.title} />
+            <ListItemButton
+              path={item.path}
+              icon={item.icon}
+              text={item.title}
+              isLink={item.isLink}
+            />
           </ListItem>
         ))}
       </List>

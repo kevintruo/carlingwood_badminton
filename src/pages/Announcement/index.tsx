@@ -2,7 +2,7 @@ import Section from "../../components/Section";
 
 export default function Announcement() {
   return (
-    <Section>
+    <Section id='announcement'>
       <div className='flex flex-row w-full justify-between p-5 text-center'>
         <div className='flex flex-col w-full'>
           <p className='text-xl font-semibold text-black  dark:text-white dark:bg-black underline'>

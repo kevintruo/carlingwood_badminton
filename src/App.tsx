@@ -1,4 +1,4 @@
-import Main from "./Main";
+import Main from "./pages/Main";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Regulations from "./pages/Regulations";

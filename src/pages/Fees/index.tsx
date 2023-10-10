@@ -2,7 +2,7 @@ import Section from "../../components/Section";
 
 export default function Fees() {
   return (
-    <Section>
+    <Section id='fees'>
       <div className='flex flex-row w-screen justify-between p-5'>
         <div className='flex flex-col gap-2'>
           <p className='text-3xl font-bold text-black  dark:text-white dark:bg-black'>Fees</p>
